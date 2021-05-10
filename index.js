@@ -5,11 +5,13 @@ const app = express();
 
 // Route Root
 app.get('/', (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
   res.send('API is running...');
 });
 
 // buy-home API
 app.get('/api/buy-home', (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
   res.json(buyHome);
 });
 
